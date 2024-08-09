@@ -8,6 +8,13 @@ fun main() {
     println(verifier.verify("0123456768798"))
     println(verifier.verify("0"))
     println(verifier.verify("123abc123"))
+    println("-----------------")
     // Float test
+    val floatVerifier = FloatVerifier()
+    println(floatVerifier.verify("12345"))
+    println(floatVerifier.verify("0.01"))
+    println(floatVerifier.verify("0123456768798"))
+    println(floatVerifier.verify(".01"))
+    println(floatVerifier.verify("123abc123"))
 
 }
