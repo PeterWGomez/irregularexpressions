@@ -5,16 +5,17 @@ class FloatVerifier {
 
     fun verify(string: String): Boolean {
         state = FirstFloatDigit()
+        var letterCounter = 0
         //for password
         //if (string.length < 8) return false
-        // flag for decimal
-        var decimal = false
+        var firstLetter = string.first().toString()
+        var decimalCount = 0
         string.chunked(1).forEach {
+            letterCounter++
+            state.consumeCharacter(it, this, firstLetter, letterCounter, decimalCount)
             if (it == ".") {
-                println("decimal found")
-                println(decimal)
+                decimalCount++
             }
-            state.consumeCharacter(it, this)
         }
         return state is FloatValid
     }
