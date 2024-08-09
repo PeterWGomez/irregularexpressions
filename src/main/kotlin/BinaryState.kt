@@ -1,7 +1,7 @@
 package org.example
 
 interface BinaryState {
-    fun consumeCharacter(char: String, binaryVerifier: BinaryVerifier) {
+    fun consumeCharacter(char: String, binaryVerifier: BinaryVerifier, lastLetter: String) {
 
     }
 }
