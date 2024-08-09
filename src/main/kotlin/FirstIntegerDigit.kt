@@ -1,11 +1,11 @@
 package org.example
 
-class FirstDigit: IntegerState {
+class FirstIntegerDigit : IntegerState {
     override fun consumeCharacter(char: String, integerVerifier: IntegerVerifier) {
         if (char in "123456789") {
-            integerVerifier.state = Valid()
+            integerVerifier.state = IntegerValid()
         } else {
-            integerVerifier.state = Invalid()
+            integerVerifier.state = IntegerInvalid()
         }
     }
 }

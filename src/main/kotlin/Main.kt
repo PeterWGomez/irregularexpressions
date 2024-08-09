@@ -26,5 +26,22 @@ fun main() {
     println(floatVerifier.verify("0123456768798"))
     println(floatVerifier.verify("123abc123"))
     println(floatVerifier.verify("0.10."))
-
+    // Binary tests
+    val binaryVerifier = BinaryVerifier()
+    println("Binary tests")
+    println("Valid:")
+    println(binaryVerifier.verify("1"))
+    println(binaryVerifier.verify("11"))
+    println(binaryVerifier.verify("101"))
+    println(binaryVerifier.verify("11111111"))
+    println(binaryVerifier.verify("100011010001"))
+    println(binaryVerifier.verify("1001"))
+    println("Invalid:")
+    println(binaryVerifier.verify("0123456768798"))
+    println(binaryVerifier.verify("123abc123"))
+    println(binaryVerifier.verify("0.10."))
+    println(binaryVerifier.verify("0"))
+    println(binaryVerifier.verify("01"))
+    println(binaryVerifier.verify("100"))
+    println(binaryVerifier.verify("10"))
 }
