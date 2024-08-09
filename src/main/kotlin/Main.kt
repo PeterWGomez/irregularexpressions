@@ -12,7 +12,7 @@ fun main() {
     println(verifier.verify("0"))
     println(verifier.verify("123abc123"))
     println("-----------------")
-    // Float test
+    // Float tests
     val floatVerifier = FloatVerifier()
     println("Float tests")
     println("Valid:")
