@@ -4,7 +4,7 @@ import kotlin.test.assertEquals
 
 class IntegerTest {
     @Test
-    fun testPointConstruction() {
+    fun testInteger() {
         val verifier = IntegerVerifier()
         assertEquals(verifier.verify("12345"), true)
         assertEquals(verifier.verify("12345455469785968990234902190398082883482384848"), true)
